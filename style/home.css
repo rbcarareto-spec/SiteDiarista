@@ -1,0 +1,488 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Variaveis Globais */
+:root {
+    --primary: #6b2aee;
+    --secondary: #02e7d9;
+    --light-grey: #e5e5e5;
+    --dark-grey: #707070;
+    font-family: "Poppins", sans-serif;
+}
+
+/* header */
+header {
+    padding: 15px 0;
+    box-shadow: 1px 0 15px rgba(98, 98, 98, 0.294);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-contained {
+    background-color: var(--primary);
+    padding: 10px 35px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.btn-void {
+    background-color: #eeeded75;
+    padding: 10px 35px;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+/*fim header */
+
+/* Body */
+/* section principal */
+.principal {
+    background: url(../img/bg-image-principal.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 70% 70%;
+}
+
+.principal-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.principal-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 370px;
+}
+
+.principal-diarista-text {
+    border: solid 2px var(--light-grey);
+    padding: 15px 35px;
+    border-radius: 70px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    position: relative;
+}
+
+/* POSITION RELATIVE A fica posicionado dentro DIV QUE O ENVOLVE 
+SE FOR STATIC ELE NÃO RESPEITA A DIV*/
+
+.principal-diarista-text span {
+    color: var(--primary);
+}
+
+.principal-description p {
+    font-size: 20px;
+    color: var(--dark-grey);
+    padding-left: 35px;
+}
+
+/* PSEUDO ELEMENTO */
+.principal-diarista-text::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: var(--light-grey);
+    background-image: url(../img/icon-search-principal.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    border-radius: 50%;
+    top: -15px;
+    right: -15px;
+}
+
+.principal-description a {
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.principal-image {
+    position: relative;
+    z-index: 50;
+}
+
+.principal-image::after,
+.principal-image::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+
+}
+
+.principal-image::before {
+    width: 131px;
+    height: 131px;
+    background-color: var(--primary);
+    top: 80px;
+}
+
+.principal-image::after {
+    width: 37px;
+    height: 37px;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    bottom: 40px;
+    z-index: 50;
+}
+
+/* FIM section principal */
+
+/* Secão porque */
+
+.porq {
+    background-image: linear-gradient(var(--secondary), var(--primary));
+    margin-top: -100px;
+    padding: 100px 0 150px 0;
+    color: white;
+    position: relative;
+}
+
+.porq::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: solid 4px white;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    background-image: url(../img/icon-trigulo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    transform: translate(50%);
+    right: 50%;
+    top: -30px;
+
+}
+
+.porq h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.porq hr {
+    margin: 0 auto;
+    width: 10%;
+    border: inset 1px rgba(255, 255, 255, 0.25);
+}
+
+.porq-campos-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.porq-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* pseudo classe primaira div da classe */
+.porq-item div:first-child {
+    border: solid 2px white;
+    border-radius: 50%;
+    padding: 5px;
+
+}
+
+.porq-item i {
+    font-size: 40px;
+}
+
+.porq-campos-item hr {
+    display: none;
+}
+
+/*FIM Secão porque */
+
+/* SEÇÃO FAQS */
+.division-wave {
+    /* width: 100%; */
+    height: 100px;
+    background-image: url("../img/wave.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+    position: relative;
+    top: -50px;
+}
+
+.title-section-faqs {
+    text-align: center;
+    color: var(--dark-grey);
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.title-section-faqs h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.title-section-faqs p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.title-section-faqs hr {
+    margin: 0 auto;
+    width: 10%;
+    border: inset 1px;
+}
+
+
+.accordion {
+    background-color: white;
+    color: var(--primary);
+    padding: 18px;
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.accordion,
+.panel {
+    border: solid 1px var(--primary);
+    text-align: left;
+}
+
+.panel {
+    padding: 0 18px;
+    overflow: hidden;
+    display: none;
+    border-top: none;
+    font-size: 17px;
+    color: #2c3a57;
+}
+
+.accordion h5 {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.faqs {
+    padding-bottom: 50px;
+}
+
+.accordion img {
+    width: 15px;
+
+}
+
+.minus {
+    display: none;
+}
+
+.active .plus {
+    display: none;
+}
+
+.active .minus {
+    display: inline-block;
+}
+
+.active {
+    border-bottom: none;
+}
+
+/*FIM SEÇÃO FAQS */
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+
+}
+
+.footer-item {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.footer-item li {
+    list-style: none;
+}
+
+.footer-item li a {
+    color: #fff;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-item h4 {
+    padding-bottom: 15px;
+}
+
+.social-media i {
+    color: var(--light-grey);
+    font-size: 30px;
+}
+
+.social-media a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #581ecd;
+    display: grid;
+    place-items: center;
+}
+
+.social-media a:hover {
+    transform: scale(1.07);
+    transition: .4s;
+}
+
+/* FIM Footer */
+
+/* BREAKPOINTS */
+@media(max-width: 1200px) {}
+
+@media(max-width: 992px) {
+    .principal {
+        background-size: 100% 100%;
+        background-position: bottom;
+        padding: 30px 0;
+    }
+
+    .principal-image {
+        display: none;
+    }
+
+    .principal-section {
+        justify-content: center;
+    }
+
+    .principal-description {
+        text-align: center;
+    }
+
+    .porq {
+        margin: 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 0;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .nav-menu {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .principal-section,
+    .principal-description {
+        width: 100%;
+    }
+
+    .principal-description {
+        gap: 0;
+        max-width: 100%;
+    }
+
+    .principal-diarista-text,
+    .principal-description p {
+        border: none;
+        padding: 0;
+        font-weight: normal;
+        font-size: 1.2rem;
+        margin: 0;
+
+    }
+
+    .principal-diarista-text::after {
+        display: none;
+    }
+
+    .principal-diarista-text span {
+        color: var(--dark-grey);
+    }
+
+    .principal-description a {
+        display: block;
+        width: 80%;
+        margin: 30px auto 10px auto;
+    }
+}
+
+@media(max-width: 605px) {
+
+    .porq-campos-item{
+        gap: 15px;
+    }
+
+    .porq-campos-item hr {
+        width: 100%;
+        display: block;
+    }
+
+    .footer-content{
+        grid-template-columns: 1fr;
+    }
+
+    .porq-item i{
+        font-size: 24px;
+    }
+
+    .btn-header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
